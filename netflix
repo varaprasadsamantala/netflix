@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset some default styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background image to the header */
+header {
+    background-image: url('netflix-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+/* Style the navigation bar */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 120px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.user-controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.language-dropdown {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+}
+
+.sign-in-button {
+    background-color: #e50914;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Style the hero section */
+.hero {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Style the movie list section (you can add more styles) */
+.movie-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style the footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .hero {
+        text-align: left;
+    }
+
+    .nav-links {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .nav-links li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .user-controls {
+        position: static;
+        margin-top: 20px;
+        text-align: right;
+    }
+
+    .cta-button {
+        display: block;
+        margin: 20px auto;
+    }
+}
+/* ... (previous CSS code) ... */
+
+/* Style the hero section */
+.hero {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.email-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email-input input[type="email"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+/* ... (previous CSS code) ... */
+
+/* Style the movie list section */
+.movie-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.movie {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.movie img {
+    max-width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.movie h2 {
+    font-size: 1.2rem;
+    margin: 10px;
+}
+
+/* ... (remaining CSS code) ... */
+
+/* ... (remaining CSS code) ... */
+/* ... (previous CSS code) ... */
+
+/* Style the footer section */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.language-selector,
+.region-selector {
+    margin-top: 20px;
+}
+
+.language-selector label,
+.region-selector label {
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* ... (remaining CSS code) ... */
+
+
+    </style>
+    <title>Netflix Clone</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <img src="netflix-logo.png" alt="Netflix Logo" class="logo">
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">TV Shows</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">Latest</a></li>
+                    <li><a href="#">My List</a></li>
+                </ul>
+                <div class="user-controls">
+                    <select class="language-dropdown">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                    <a href="#" class="sign-in-button">Sign In</a>
+                </div>
+            </div>
+        </nav>
+        <!-- ... (previous HTML code) ... -->
+
+<div class="hero">
+    <h1>Welcome to Netflix</h1>
+    <p>Watch unlimited movies and TV shows.</p>
+    <div class="email-input">
+        <input type="email" placeholder="Enter your email">
+        <button class="cta-button">Get Started</button>
+    </div>
+</div>
+
+<!-- ... (remaining HTML code) ... -->
+
+    </header>
+
+    <section class="movie-list">
+        <!-- Add movie posters and titles here -->
+        <section class="movie-list">
+            <div class="movie">
+                <img src="movie1.jpg" alt="Movie 1">
+                <h2>Maze Runner</h2>
+            </div>
+            <div class="movie">
+                <img src="movie2.jpg" alt="Movie 2">
+                <h2>Ready Player One</h2>
+            </div>
+            <div class="movie">
+                <img src="movie3.jpg" alt="Movie 3">
+                <h2>U Turn</h2>
+            </div>
+        
+            <!-- Add more movie items as needed -->
+        </section>
+        
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Netflix Clone</p>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Questions? Call 000-800-919-1694</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Help Centre</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Media Centre</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Ways to Watch</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Cookie Preferences</a></li>
+                    <li><a href="#">Corporate Information</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Speed Test</a></li>
+                    <li><a href="#">Legal Notices</a></li>
+                    <li><a href="#">Only on Netflix</a></li>
+                </ul>
+            </div>
+            <div class="language-selector">
+                <label for="language-dropdown">Language:</label>
+                <select id="language-dropdown">
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                    <!-- Add more language options as needed -->
+                </select>
+            </div>
+            <div class="region-selector">
+                <label for="region-dropdown">Region:</label>
+                <select id="region-dropdown">
+                    <option value="in">Netflix India</option>
+                    <!-- Add more region options as needed -->
+                </select>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
